@@ -2,20 +2,25 @@
 
 const ADMIN_KEYCODE = '1111'
 let message;
-let IsAccepted = false;
 let value;
+let isAccepted = false;
 
 do {
     value = prompt('Введите пароль :');
     if (value === null) {
-        alert('Отменено пользователем!');
+        message = 'Отменено пользователем!';
 
     } else if (value === ADMIN_KEYCODE) {
-        alert('Добро пожаловать !');
-        break;
+        message = 'Добро пожаловать !'
+        isAccepted = true;
 
     } else {
-        alert('Доступ запрещен, неверный пароль!');
+        message = 'Доступ запрещен, неверный пароль!';
+    }
+    alert(message);
+
+    if (isAccepted) {
+        break;
     }
 }
-while (IsAccepted === false);
+while (true);

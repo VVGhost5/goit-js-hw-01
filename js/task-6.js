@@ -28,6 +28,5 @@ do {
   }
 } while (input !== null);
 
-if (input == null) {
-  alert(`Общая сумма чисел равна ${total} `);
-}
+
+alert(`Общая сумма чисел равна ${total} `);

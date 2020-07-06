@@ -14,6 +14,7 @@ let isUserEnteredValue = false;
 let countryValueNew;
 let isAccepted = false;
 let countryValue;
+let message;
 
 do {
     countryValue = prompt("Введите страну, куда нужно доставить товар");
@@ -32,39 +33,39 @@ do {
 
     if (isUserEnteredValue) {
         switch (countryValueNew) {
-            case "китай":
-                alert(`Доставка в ${chinaName} будет стоить ${chinaPrice} кредитов`);
+            case chinaName.toLowerCase():
+                message = `Доставка в ${chinaName} будет стоить ${chinaPrice} кредитов`;
                 isAccepted = true;
                 break;
 
-            case "чили":
-                alert(`Доставка в ${chiliName} будет стоить ${chiliPrice} кредитов`);
+            case chiliName.toLowerCase():
+                message = `Доставка в ${chiliName} будет стоить ${chiliPrice} кредитов`;
                 isAccepted = true;
                 break;
 
-            case "австралия":
-                alert(
-                    `Доставка в ${australiaName} будет стоить ${australiaPrice} кредитов`
-                );
+            case australiaName.toLowerCase:
+                message = `Доставка в ${australiaName} будет стоить ${australiaPrice} кредитов`;
                 isAccepted = true;
                 break;
 
-            case "индия":
-                alert(`Доставка в ${indiaName} будет стоить ${indiaPrice} кредитов`);
+            case indiaName.toLowerCase:
+                message = `Доставка в ${indiaName} будет стоить ${indiaPrice} кредитов`;
                 isAccepted = true;
                 break;
 
-            case "ямайка":
-                alert(`Доставка в ${jamaicaName} будет стоить ${jamaicaPrice} кредитов`);
+            case jamaicaName.toLowerCase:
+                message = `Доставка в ${jamaicaName} будет стоить ${jamaicaPrice} кредитов`;
                 isAccepted = true;
                 break;
 
             default:
-                alert("В вашей стране доставка не доступна");
+                message = "В вашей стране доставка не доступна";
         }
-        if (isAccepted === true) {
+        alert(message);
+
+        if (isAccepted) {
             break;
         }
     }
 }
-while (isAccepted === false);
+while (true);
